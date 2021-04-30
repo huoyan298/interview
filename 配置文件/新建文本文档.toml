@@ -1,0 +1,15 @@
+title = "TOML Example"
+[owner]
+name ="hello world"
+
+[database]
+server="193.168.1.1"
+
+[server]
+  [server.alpha]
+     ip="10.0.0.2"
+  [server.beta]
+     dc ="eqdc10"
+
+[clients]
+   data=[ ["gama","delta"],[1,2] ]
