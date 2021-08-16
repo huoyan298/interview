@@ -1,0 +1,1 @@
+jmeter测试dubbo接口，安装jmeter-plugins-for-apache-dubbo
