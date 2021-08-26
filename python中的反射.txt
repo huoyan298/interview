@@ -1,0 +1,35 @@
+python:通过字符串来操作python代码中的对象的属性和方法
+一、反射主要几个函数:
+hasattr,getattr,setattr,delattr
+1.hasattr:字符串类型的属性名/方法名--->判断对象是够包含对应的属性
+
+2.getattr:传入字符串类型属性名/方法名---》返回对应的方法内存地址或值
+
+3.setattr:设置一个对象属性（增改操作）还可给对象绑定一个函数
+
+4.delattr:删除对象中的属性
+
+5.eval()函数用来执行一个字符串表达式，并返回表达式的值
+
+二、通过反射操作模块
+1.getattr(模块,‘属性名/方法名‘)
+例：import sys
+    print(getattr(sys,'path'))
+   
+2.动态载入模块
+c=__import__(sys)
+      c.path()
+
+
+三、通过反射操作当前文件
+ sys.modules[__name__]
+例：import sys
+    getattr(sys.modules[__name__],'foo')()
+    或
+    f=sys.modules[__name__]
+    cls=getattr(f,'foo ')
+
+四：反射的三个场景：
+ 1.用户输入input:通过字符串转为值或方法
+ 2.从文件读出的字符串，转为属性或方法
+ 3.网络：当你浏览某个网页，点击某文字或图片，反射后通过上述的几个函数找达到对应的方法
