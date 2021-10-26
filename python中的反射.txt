@@ -17,9 +17,15 @@ hasattr,getattr,setattr,delattr
     print(getattr(sys,'path'))
    
 2.动态载入模块
+2.1
 c=__import__(sys)
+
       c.path()
 
+2.2 importlib:
+例：
+>>> import importlib
+>>> myos=importlib.import_module("os")
 
 三、通过反射操作当前文件
  sys.modules[__name__]
@@ -28,6 +34,8 @@ c=__import__(sys)
     或
     f=sys.modules[__name__]
     cls=getattr(f,'foo ')
+
+
 
 四：反射的三个场景：
  1.用户输入input:通过字符串转为值或方法
