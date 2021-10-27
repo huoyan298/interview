@@ -1,1 +1,17 @@
 使用 abc 模块可以很轻松的定义抽象基类(实现类似其他语言中的接口）以及设计模式中需要使用到：
+常用方法，函数：
+abc,ABCMEeta()
+abc.abstractmethod()
+abc.ABC
+abc.abstractproperty()
+abc.abstractclassmethod()
+abc.get_cache_token()
+abc.abstractstaticmethod()
+
+1.抽象基类只有完全覆写才能实例化   @abstractmethod  @abstractproperty
+2，虚拟子类可部分实现
+
+可以通过@classmethod  __subclasshook__(subclass) 
+override来实现功能
+使用场景：
+1.用作父类    2.使用issubclass或isinstacnce检验实例类型 3.抛出异常说明
