@@ -14,4 +14,8 @@ abc.abstractstaticmethod()
 可以通过@classmethod  __subclasshook__(subclass) 
 override来实现功能
 使用场景：
-1.用作父类    2.使用issubclass或isinstacnce检验实例类型 3.抛出异常说明
+1.用作父类    2.使用issubclass或isinstacnce检验实例类型 
+3.抛出异常说明
+    # @abc.abstractmethod
+    # def get_payload(self, **kwargs):
+    #     raise NotImplementedError()
