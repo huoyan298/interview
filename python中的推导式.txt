@@ -1,0 +1,21 @@
+python 的推导式：
+列表推导式、字典推导式、集合推导式
+1.使用[]生成list
+[out_exp for exp in input_list if exp==2]
+
+<==>
+out_exp:
+for exp in input_list:
+     if exp==2:
+
+2.字典推导式：
+中括号改为大括号：
+变量名={表达式 for 临时变量 可迭代内容}
+例：
+mecase={'a':10,'b':34}
+mecase_frequency={v:k for k,v in mcase.items()}
+print mcase_frequency
+
+3.集合推导式：
+squared={x**2 for x in [1,1,2]}
+print(squared)
