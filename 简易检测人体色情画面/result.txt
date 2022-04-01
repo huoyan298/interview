@@ -1,0 +1,3 @@
+#利用PIL的Image库，将人体图片转为灰度图，分析露出皮肤占比比例，简易判断是否为色情图片
+False yifu.png PNG 602×946: result=False message='The biggest region contains l
+ess than 45 (37.77)'
